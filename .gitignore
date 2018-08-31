@@ -1,0 +1,8 @@
+new_student_volunteer/migrations/__pycache__/*
+__pycache__/*
+result_rendered.html
+.DS_Store
+csv_str.txt
+db.sqlite3
+volunteer_allocation/*
+volunteer_allocation/__pycache__/*

@@ -1,0 +1,49 @@
+﻿<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta charset="utf-8">
+<title>Allocation</title>
+    {% load static %}
+ <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+
+<style>
+::-webkit-input-placeholder {
+  text-align: center;
+}    
+th, td{ text-align: center}
+</style>
+</head>
+<!--frontend posts a form and backend processes the form -->
+<!-- look forward: it should be an enhancement of sva.org.cn, automatic uploading volunteer application info to
+sva.org.cn-->
+<body>
+
+<table class="table table-striped">
+            <thead>
+
+
+                <th>序号</th> <th> 内容</th> <th> 可报名人数</th> <th> 已报名同学</th>
+            </tr>
+         </thead>
+         <tfoot>
+        </tfoot>         
+         <tbody>
+            {% for item in positions %}
+            <tr>
+              <td>{{forloop.counter}}</td>
+              <td>{{item.content}}</td>
+              <td>{{item.total_number}}</td>
+              <td>{{item.name_list}}</td>
+            </tr>
+            {% endfor %}         
+    </tbody>
+</table>
+</body>
+
+</html>
+
+
+
